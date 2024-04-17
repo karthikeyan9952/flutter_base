@@ -14,11 +14,6 @@ class DropDownCustom<T> extends DropdownButtonFormField<T> {
   /// save, reset, or validate multiple fields at once. To use without a [Form],
   /// pass a [GlobalKey] to the constructor and use [GlobalKey.currentState] to
   /// save or reset the form field.
-  ///
-  /// See also:
-  ///
-  ///  * [DropdownButton], which is the underlying text field without the [Form]
-  ///    integration.
   DropDownCustom(
       {super.key,
       super.value,

@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(width: SizeUnit.sm),
             InkWell(
                 onTap: onSignUp,
-                child: const TextCustom("SignUp", fontWeight: FontWeight.bold))
+                child: const TextCustom("SignUp", fontWeight: FontWeight.bold)),
           ],
         ),
       ],

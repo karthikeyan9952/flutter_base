@@ -4,6 +4,7 @@ import 'package:flutter_base/theme/theme_manager.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
+/// Declaration for all providers
 List<SingleChildWidget> providers = [
   ChangeNotifierProvider<ThemeManager>(create: (context) => ThemeManager()),
   ChangeNotifierProvider<AuthProvider>(create: (context) => AuthProvider()),

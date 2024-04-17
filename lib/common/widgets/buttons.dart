@@ -29,7 +29,7 @@ class ButtonSecondary extends FilledButton {
   /// Creates a Material Design filled button.
   ButtonSecondary(
       {super.key,
-      required VoidCallback onPressed,
+      required void Function()? onPressed,
       required String label,
       bool isLoading = false})
       : super(

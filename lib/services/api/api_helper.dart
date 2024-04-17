@@ -29,7 +29,6 @@ class APIHelper {
             duration: const Duration(seconds: 3));
         return data;
       case 401:
-        showMessage(context, "Unauthorized");
         handleUnauthorized(context);
         return data;
       default:
