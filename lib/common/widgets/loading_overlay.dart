@@ -1,11 +1,18 @@
-import 'package:flutter_base/theme/pallete.dart';
+import 'package:flutter_base/theme/Palette.dart';
 import 'package:flutter/material.dart';
 
 class LoadingOverlay extends StatelessWidget {
+  /// The value of loading status
+  final bool isLoading;
+
+  /// The primary content of the [LoadingOverlay] under the loading.
+  ///
+  /// Typically a [Scaffold] widget.
+  final Widget child;
+
+  /// Creates loading overlay top of the screen. All actions are disabled in the app while loading
   const LoadingOverlay(
       {super.key, required this.isLoading, required this.child});
-  final bool isLoading;
-  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +20,7 @@ class LoadingOverlay extends StatelessWidget {
         ? Stack(children: [
             child,
             Scaffold(
-                backgroundColor: Pallete.dark.withOpacity(.25),
+                backgroundColor: Palette.dark.withOpacity(.25),
                 body: Center(
                   child: Container(
                       alignment: Alignment.center,
@@ -23,7 +30,7 @@ class LoadingOverlay extends StatelessWidget {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child: const CircularProgressIndicator()),
-                ))
+                )),
           ])
         : child;
   }

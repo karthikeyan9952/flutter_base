@@ -21,7 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ButtonPrimary(onPressed: onLogin, label: "Login"),
+        ButtonSecondary(onPressed: onLogin, label: "Login"),
         const SizedBox(height: SizeUnit.xlg),
         Row(
           crossAxisAlignment: CrossAxisAlignment.end,

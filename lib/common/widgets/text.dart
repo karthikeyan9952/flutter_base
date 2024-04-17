@@ -1,45 +1,5 @@
 import 'package:flutter/material.dart';
 
-class TextAppBarHead extends StatelessWidget {
-  final String data;
-  final Color? color;
-  const TextAppBarHead(
-    this.data, {
-    super.key,
-    this.color,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(data,
-        textAlign: TextAlign.center,
-        style:
-            TextStyle(color: color, fontSize: 20, fontWeight: FontWeight.w600));
-  }
-}
-
-class BtnText extends StatelessWidget {
-  const BtnText(
-    this.label, {
-    super.key,
-    this.color,
-    this.size,
-  });
-
-  final String label;
-  final Color? color;
-  final double? size;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(label,
-        style: TextStyle(
-          fontSize: size ?? 16,
-          color: color,
-        ));
-  }
-}
-
 class TextUnerlined extends StatelessWidget {
   final String value;
   const TextUnerlined(

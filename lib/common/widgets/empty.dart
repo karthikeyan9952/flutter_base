@@ -4,6 +4,7 @@ import 'package:flutter_base/utilities/extensions/context_extention.dart';
 import 'package:flutter/material.dart';
 
 class Empty extends StatelessWidget {
+  /// Creates a Placeholder
   const Empty({super.key, this.size = 200});
   final double? size;
 
@@ -16,6 +17,7 @@ class Empty extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
+              /// Image asset path
               "assets/images/No data-cuate (1).png",
               height: context.widthHalf() - 18,
             ),

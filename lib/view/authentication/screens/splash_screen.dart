@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_base/common/widgets/text.dart';
 import 'package:flutter_base/services/route/app_route.dart';
 import 'package:flutter_base/services/route/routes.dart';
-import 'package:flutter_base/theme/pallete.dart';
+import 'package:flutter_base/theme/palette.dart';
 import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Pallete.primary,
+      backgroundColor: Palette.primary,
       body: Center(
           child: TextCustom(
         "Splash",

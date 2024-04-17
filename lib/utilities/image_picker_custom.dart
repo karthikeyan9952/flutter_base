@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_base/constants/size_unit.dart';
-import 'package:flutter_base/theme/pallete.dart';
+import 'package:flutter_base/theme/palette.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -34,7 +34,7 @@ class ImagePickerCustom {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Icon(CupertinoIcons.camera,
-                          size: 28, color: Pallete.primary),
+                          size: 28, color: Palette.primary),
                       SizedBox(height: SizeUnit.sm / 2),
                       Text("Camera")
                     ],
@@ -46,7 +46,7 @@ class ImagePickerCustom {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Icon(CupertinoIcons.photo,
-                          size: 28, color: Pallete.primary),
+                          size: 28, color: Palette.primary),
                       SizedBox(height: SizeUnit.sm / 2),
                       Text("Gallery")
                     ],

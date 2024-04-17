@@ -1,54 +1,14 @@
 import 'package:flutter_base/common/widgets/text.dart';
-import 'package:flutter_base/theme/pallete.dart';
-import 'package:flutter_base/utilities/extensions/context_extention.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_base/theme/palette.dart';
 
 import 'loaders.dart';
 
-class SocialButton extends StatelessWidget {
-  final String label;
-  final String imgPath;
-  final double? width;
-  final VoidCallback? voidCallback;
-  final Color? color;
-  const SocialButton(
-      {super.key,
-      required this.label,
-      this.width,
-      this.voidCallback,
-      this.color,
-      required this.imgPath});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 48,
-      width: width ?? context.widthFull(),
-      child: ElevatedButton(
-          onPressed: voidCallback,
-          style: ButtonStyle(
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                      side: BorderSide(color: Pallete.muted),
-                      borderRadius: BorderRadius.circular(10))),
-              backgroundColor: MaterialStateProperty.all(Colors.white),
-              shadowColor: MaterialStateProperty.all(Colors.transparent)),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(imgPath, height: 24),
-              const SizedBox(width: 12),
-              BtnText(label, size: 15, color: Pallete.dark),
-            ],
-          )),
-    );
-  }
-}
-
 class ButtonPrimary extends ElevatedButton {
+  /// Creates a Material Design elevated button.
   ButtonPrimary(
       {super.key,
-      required VoidCallback onPressed,
+      required void Function()? onPressed,
       required String label,
       bool isLoading = false})
       : super(
@@ -65,7 +25,8 @@ class ButtonPrimary extends ElevatedButton {
             onPressed: isLoading ? () {} : onPressed);
 }
 
-class ButtonSecondary extends OutlinedButton {
+class ButtonSecondary extends FilledButton {
+  /// Creates a Material Design filled button.
   ButtonSecondary(
       {super.key,
       required VoidCallback onPressed,
@@ -80,6 +41,7 @@ class ButtonSecondary extends OutlinedButton {
                       label,
                       size: 16,
                       fontWeight: FontWeight.bold,
+                      color: Palette.dark,
                     ),
             ),
             onPressed: isLoading ? () {} : onPressed);
