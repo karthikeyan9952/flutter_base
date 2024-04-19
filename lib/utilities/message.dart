@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/constants/keys.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-showMessage(BuildContext context, String message,
-    {Duration duration = const Duration(seconds: 1)}) {
-  return ScaffoldMessenger.of(context).showSnackBar(
+showMessage(String message, {Duration duration = const Duration(seconds: 1)}) {
+  return snackbarKey.currentState?.showSnackBar(
     SnackBar(
       duration: duration,
       behavior: SnackBarBehavior.floating,

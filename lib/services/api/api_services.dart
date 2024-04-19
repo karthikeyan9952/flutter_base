@@ -7,7 +7,6 @@ import 'package:flutter_base/constants/app_strings.dart';
 import 'package:flutter_base/constants/keys.dart';
 import 'package:flutter_base/providers/providers.dart';
 import 'package:flutter_base/services/api/api_helper.dart';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class APIService {
@@ -23,8 +22,7 @@ class APIService {
     "Authorization": "Bearer ${authProvider.token}"
   };
 
-  Future post(BuildContext context, String endPoint,
-      {required Map<String, String> body}) async {
+  Future post(String endPoint, {required Map<String, String> body}) async {
     http.Response response = await http
         .post(Uri.parse(baseURL + endPoint), headers: headers, body: body)
         .timeout(
@@ -34,11 +32,10 @@ class APIService {
     logger.i(baseURL + endPoint);
     logger.i(body);
     logger.w(response.body);
-    return helper.httpErrorHandle(response: response, context: context);
+    return helper.httpErrorHandle(response: response);
   }
 
-  Future get(BuildContext context, String endPoint,
-      {Map<String, String>? queryParams}) async {
+  Future get(String endPoint, {Map<String, String>? queryParams}) async {
     http.Response response = await http
         .get(
             Uri.parse(baseURL + endPoint).replace(queryParameters: queryParams),
@@ -51,7 +48,7 @@ class APIService {
     logger.i(baseURL + endPoint);
     queryParams != null ? logger.i(queryParams) : null;
     logger.w(response.body);
-    return helper.httpErrorHandle(response: response, context: context);
+    return helper.httpErrorHandle(response: response);
   }
 
   Future multipartFormDataPost(String endPoint, File? file,

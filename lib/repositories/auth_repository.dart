@@ -17,8 +17,8 @@ class AuthRepository {
     authProvider.isLoading = true;
 
     /// Store a api response body as a Map
-    Map responseBody = await api
-        .post(context, "login", body: {"email": email, "password": password});
+    Map responseBody =
+        await api.post("login", body: {"email": email, "password": password});
 
     /// Checks if response body has any errors from backend
     if (api.hasError(responseBody)) {

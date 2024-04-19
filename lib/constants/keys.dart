@@ -9,3 +9,7 @@ var logger = Logger(filter: null, printer: PrettyPrinter(), output: null);
 
 //keys
 GlobalKey<ScaffoldState> mainKey = GlobalKey<ScaffoldState>();
+
+//snackbar key
+final GlobalKey<ScaffoldMessengerState> snackbarKey =
+    GlobalKey<ScaffoldMessengerState>();

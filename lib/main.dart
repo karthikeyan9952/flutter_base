@@ -33,6 +33,7 @@ class _MyAppState extends State<MyApp> {
           darkTheme: darkTheme,
           themeMode: themeManager.themeMode,
           routerConfig: router,
+          scaffoldMessengerKey: snackbarKey,
         );
       },
     );
