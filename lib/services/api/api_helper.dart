@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_base/constants/keys.dart';
-import 'package:flutter_base/services/route/app_route.dart';
+import 'package:flutter_base/services/route/app_router.dart';
 import 'package:flutter_base/services/route/routes.dart';
 import 'package:flutter_base/services/storage/storage_constants.dart';
 import 'package:flutter_base/utilities/message.dart';

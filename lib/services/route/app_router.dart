@@ -14,7 +14,7 @@ import 'routes.dart';
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _shellNavigatorKey = GlobalKey<NavigatorState>();
 bool isInitialized = false;
-bool isLoggingIn = false;
+bool isLoggedIn = false;
 
 // GoRouter configuration
 final GoRouter router = GoRouter(
@@ -78,7 +78,7 @@ final GoRouter router = GoRouter(
   redirect: (context, state) {
     if (!isInitialized) {
       return Routes.splash;
-    } else if (isLoggingIn) {
+    } else if (isLoggedIn) {
       return null;
     }
     return null;

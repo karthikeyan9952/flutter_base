@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_base/common/widgets/buttons.dart';
 import 'package:flutter_base/common/widgets/text.dart';
 import 'package:flutter_base/constants/size_unit.dart';
-import 'package:flutter_base/services/route/app_route.dart';
+import 'package:flutter_base/services/route/app_router.dart';
 import 'package:flutter_base/services/route/routes.dart';
 import 'package:go_router/go_router.dart';
 
@@ -39,7 +39,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   void onSignUp() {
-    isLoggingIn = true;
+    isLoggedIn = true;
     context.go(Routes.home);
   }
 
